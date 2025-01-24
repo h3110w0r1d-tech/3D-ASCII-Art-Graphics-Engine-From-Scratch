@@ -38,4 +38,4 @@
   - Explore, experiment, and learn about the fundamentals of computer graphics through this project!
 
 
-![Screenshot of the project](Screenshot 2025-01-24 123309.png)
+![Screenshot of the project]([Screenshot 2025-01-24 123309.png](https://github.com/h3110w0r1d-tech/3D-ASCII-Art-Graphics-Engine-From-Scratch/blob/main/Screenshot%202025-01-24%20123309.png))
