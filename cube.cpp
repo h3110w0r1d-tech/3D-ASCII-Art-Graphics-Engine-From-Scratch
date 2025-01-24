@@ -1,5 +1,6 @@
 /*
         clang++ -O3 -o cube cube.cpp
+        g++ -O3 -o cube cube.cpp
 */
 
 
@@ -56,7 +57,6 @@ glm::vec3 right = glm::normalize(glm::cross(forward, cameraUp)); // Right direct
 
 
 // Cube Varibles
-
 
 float angle;
 glm::mat4 cubeRotation = glm::mat4(1.0f);
@@ -117,14 +117,6 @@ const unsigned int indices[] = {
 };
 
 
-
-
-
-
-
-
-
-
 // Copy of vertices for transformations
 float transformedVertices[24];
 
@@ -140,9 +132,6 @@ void clearScreen() {
     std::cout << "\033[H";
 }
 
-
-
-
 void applyTransform(glm::mat4& transform) {
     for (int i = 0; i < sizeof(transformedVertices) / sizeof(transformedVertices[0]); i += 3) {
         glm::vec4 vertex = glm::vec4(vertices[i], vertices[i + 1], vertices[i + 2], 1.0f);
@@ -155,9 +144,6 @@ void applyTransform(glm::mat4& transform) {
             vertex.x /= vertex.w;
             vertex.y /= vertex.w;
             vertex.z /= vertex.w;
-
-
-
 
             // Clip to the near and far planes
             if (vertex.z < nearPlane)
@@ -182,12 +168,6 @@ void applyTransform(glm::mat4& transform) {
             continue;
         }
 
-
-       
-
-
-
-
         // Skip vertices that are outside the NDC range [-1, 1] for the z-axis (clipping range)
         if (vertex.z < -1.0f || vertex.z > 1.0f)
         {
@@ -195,9 +175,6 @@ void applyTransform(glm::mat4& transform) {
             transformedVertices[i] = transformedVertices[i + 1] = transformedVertices[i + 2] = 2.0f; // Out-of-bounds
             continue;
         }
-
-
-
 
         // Assigns the respective vertice to its transformed value
         transformedVertices[i]     = vertex.x;
@@ -596,9 +573,6 @@ int main() {
 
             // Rotate the cube slightly after each frame
             angle += 1.0f * deltaTime; // Adjust the constant to control rotation speed
-
-
-
 
             // Update the lookAt position to always face forward relative to the camera's movement
             lookAt = cameraPos + forward;
