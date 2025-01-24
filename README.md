@@ -36,3 +36,6 @@
   - GPU-based rendering instead of CPU.
   - Advanced features like lighting improvements or ray tracing.
   - Explore, experiment, and learn about the fundamentals of computer graphics through this project!
+
+
+![Alt text]()
