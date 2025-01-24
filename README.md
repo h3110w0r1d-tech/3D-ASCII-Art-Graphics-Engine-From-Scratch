@@ -1,9 +1,10 @@
 3D ASCII Art Graphics Engine (From Scratch)
 
 🌟 Overview
-    This project demonstrates how graphics work at a low level. While modern graphics engines rely on efficient APIs to create 3D visuals, these abstract away much of the magic behind the scenes. With this small graphics engine, built entirely without any graphics APIs in C++ and rendered in ASCII art, you can gain a deeper understanding of how computers generate triangles and form 3D shapes. Additionally, the engine allows you to move around the scene, providing an interactive way to explore the       3D environment in ASCII art.
-    
-    This project serves as an educational tool for anyone curious about the inner workings of computer graphics.
+
+This project demonstrates how graphics work at a low level. While modern graphics engines rely on efficient APIs to create 3D visuals, these abstract away much of the magic behind the scenes. With this small graphics engine, built entirely without any graphics APIs in C++ and rendered in ASCII art, you can gain a deeper understanding of how computers generate triangles and form 3D shapes. Additionally, the engine allows you to move around the scene, providing an interactive way to explore the       3D environment in ASCII art.
+
+This project serves as an educational tool for anyone curious about the inner workings of computer graphics.
 
 🕹️Controls
   - Wasd to move around
