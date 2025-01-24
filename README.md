@@ -1,9 +1,14 @@
 3D ASCII Art Graphics Engine (From Scratch)
 
 🌟 Overview
-  This project demonstrates how graphics work at a low level. While modern graphics engines rely on efficient APIs to create 3D visuals, these abstract away much of the magic behind the scenes. With this small graphics engine, built entirely without any graphics APIs and rendered in ASCII art, you can gain a deeper understanding of how computers generate triangles and form 3D shapes.
+  This project demonstrates how graphics work at a low level. While modern graphics engines rely on efficient APIs to create 3D visuals, these abstract away much of the magic behind the scenes. With this small graphics engine, built entirely without any graphics APIs and rendered in ASCII art, you can gain a deeper understanding of how computers generate triangles and form 3D shapes. Additionally, the engine allows you to move around the scene, providing an interactive way to explore the 3D     
+  environment in ASCII art.
   
   This project serves as an educational tool for anyone curious about the inner workings of computer graphics.
+
+🕹️Controls
+  - Wasd to move around
+  - Arrow keys to change camera direction
 
 🚀 Features
   A basic graphics engine rendered in ASCII art.
@@ -26,10 +31,11 @@
   - Open the root folder in your preferred code editor (e.g., Visual Studio Code).
   - Compile the code. The compile command can be found at the top of the main source file.
 
-🕹️ Usage
+🧑‍💻 Usage
   This project works like a traditional graphics engine:
 
   The default object is a cube, but you can replace it with any object.
+  THe project allows you to move around so experiment with that.
   Feel free to challenge yourself by implementing:
   - A model importer to load custom shapes.
   - Performance optimizations.
