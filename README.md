@@ -38,4 +38,4 @@
   - Explore, experiment, and learn about the fundamentals of computer graphics through this project!
 
 
-![Alt text]()
+![Alt text](Screenshot 2025-01-24 123309.png)
