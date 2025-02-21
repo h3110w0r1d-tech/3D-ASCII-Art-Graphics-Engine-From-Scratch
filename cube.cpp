@@ -8,14 +8,9 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
-#include <algorithm>
-#include <cmath>
 #include <chrono>
-#include <thread>
 #include <vector>
-#include <windows.h>  // For GetAsyncKeyState
-#include <tuple>
-#include <atomic>
+#include <windows.h>  
 
 
 const int gridWidth = 124;
@@ -403,10 +398,16 @@ void render(const std::vector<std::tuple<int, int, float>>& triangles) {
     }
 
 
-    // Process each triangle
     for (size_t i = 0; i < triangles.size(); i += 3) {
+        glm::vec3 v0(transformedVertices[i * 3], transformedVertices[i * 3 + 1], transformedVertices[i * 3 + 2]);
+        glm::vec3 v1(transformedVertices[(i + 1) * 3], transformedVertices[(i + 1) * 3 + 1], transformedVertices[(i + 1) * 3 + 2]);
+        glm::vec3 v2(transformedVertices[(i + 2) * 3], transformedVertices[(i + 2) * 3 + 1], transformedVertices[(i + 2) * 3 + 2]);
+
+
         fillTriangle(triangles[i], triangles[i + 1], triangles[i + 2]);
+
     }
+
 
 
     // Build the back buffer from the grid
@@ -438,7 +439,7 @@ std::vector<std::tuple<int, int, float>> triangulateWithIndices(const float* ver
         int index3 = indices[i + 2] * 3; // Makes index equal to the z cooridinate of the respective point which is i
 
 
-        if (index1 < 0 || index1 >= numVertices || index2 < 0 || index2 >= numVertices || index3 < 0 || index3 >= numVertices)
+        if (index1 < 0 || index1 >= numVertices * 3 || index2 < 0 || index2 >= numVertices * 3 || index3 < 0 || index3 >= numVertices * 3)
         {
             continue; // Skip invalid indices.
         }
