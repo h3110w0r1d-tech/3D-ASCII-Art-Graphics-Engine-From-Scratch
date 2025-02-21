@@ -405,11 +405,6 @@ void render(const std::vector<std::tuple<int, int, float>>& triangles) {
 
     // Process each triangle
     for (size_t i = 0; i < triangles.size(); i += 3) {
-        glm::vec3 v0(transformedVertices[i * 3], transformedVertices[i * 3 + 1], transformedVertices[i * 3 + 2]);
-        glm::vec3 v1(transformedVertices[(i + 1) * 3], transformedVertices[(i + 1) * 3 + 1], transformedVertices[(i + 1) * 3 + 2]);
-        glm::vec3 v2(transformedVertices[(i + 2) * 3], transformedVertices[(i + 2) * 3 + 1], transformedVertices[(i + 2) * 3 + 2]);
-
-
         fillTriangle(triangles[i], triangles[i + 1], triangles[i + 2]);
     }
 
