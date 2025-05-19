@@ -185,8 +185,8 @@ void applyTransform(glm::mat4& transform) {
         glm::vec4 vertex = glm::vec4(vertices[i], vertices[i+1], vertices[i+2], 1.0f);
         vertex = transform * vertex;
 
-        if (vertex.w > 0) {
-            vertex.z /= vertex.w;
+        if (std::abs(vertex.w) > 1e-6f) {
+            vertex.x /= vertex.w;
             vertex.y /= vertex.w;
             vertex.z /= vertex.w;
 
